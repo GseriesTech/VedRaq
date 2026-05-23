@@ -153,9 +153,9 @@
   height: 80%;
   background: radial-gradient(
     ellipse at 50% 40%,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.03) 30%,
-    rgba(255, 255, 255, 0.01) 50%,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0.02) 50%,
     transparent 70%
   );
   filter: blur(100px);
@@ -171,8 +171,8 @@
   height: 60%;
   background: radial-gradient(
     ellipse at 40% 50%,
-    rgba(255, 255, 255, 0.06) 0%,
-    rgba(255, 255, 255, 0.02) 40%,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 40%,
     transparent 80%
   );
   filter: blur(120px);
@@ -189,15 +189,32 @@
   background: conic-gradient(
     from 180deg at 50% 50%,
     transparent 0deg,
-    rgba(255, 255, 255, 0.02) 90deg,
-    rgba(255, 255, 255, 0.07) 180deg,
-    rgba(255, 255, 255, 0.02) 270deg,
+    rgba(255, 255, 255, 0.06) 90deg,
+    rgba(255, 255, 255, 0.18) 180deg,
+    rgba(255, 255, 255, 0.06) 270deg,
     transparent 360deg
   );
   filter: blur(90px);
-  opacity: 0.7;
+  opacity: 0.95;
   transform: rotate(45deg);
   animation: smokeRotate 40s linear infinite;
+}
+
+.smoke-ribbon-4 {
+  position: absolute;
+  top: -20%;
+  left: 10%;
+  width: 90%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    transparent 80%
+  );
+  filter: blur(110px);
+  transform: rotate(25deg);
+  animation: smokeRotate 60s linear infinite reverse;
 }
 
 /* Subtly moving background elements to make the design feel alive and organic */
@@ -353,6 +370,6 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to right, #030303 0%, transparent 15%, transparent 85%, #030303 100%);
+  background: linear-gradient(to right, #030303 0%, rgba(3, 3, 3, 0) 28%, rgba(3, 3, 3, 0) 72%, #030303 100%);
   z-index: 10;
 }

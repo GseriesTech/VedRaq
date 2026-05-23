@@ -70,36 +70,101 @@ export default function Home() {
             </Button>
           </div>
 
-          {/* Animated Scroll Down Indicator */}
-          <div className="mt-16 sm:mt-24 flex flex-col items-center gap-2">
-            <span className="text-[10px] tracking-[0.2em] uppercase text-zinc-500 font-light">
-              Scroll down to explore engines
-            </span>
-            <div className="relative h-9 w-5 rounded-full border border-zinc-700 bg-zinc-900/50 backdrop-blur-sm">
-              <div className="absolute top-1.5 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-zinc-400 animate-mouse-wheel" />
+          {/* Animated Scroll Down Indicator - Flanked alignment exactly like the screenshot */}
+          <div className="mt-16 sm:mt-24 flex items-center justify-center gap-4 text-[10px] tracking-[0.2em] uppercase text-zinc-500 font-light select-none">
+            <span>Scroll down</span>
+            <div className="relative h-7 w-4 rounded-full border border-zinc-700 bg-[#0A0A0B]/80 backdrop-blur-sm">
+              <div className="absolute top-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-zinc-400 animate-mouse-wheel" />
             </div>
+            <span>to explore engines</span>
           </div>
 
-          {/* Minimalist Corporate Partners / Tech Integration Row */}
-          <div className="mt-20 w-full max-w-4xl border-t border-white/[0.04] pt-8">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
-              Unified Real-time Ingestion Adapters
-            </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-16 gap-y-6 opacity-40 grayscale transition-all hover:opacity-75">
-              <div className="flex items-center gap-2 text-zinc-300 text-sm font-semibold">
-                <MessageSquare className="h-4 w-4" /> Slack
+          {/* Premium Floating B&W Integrations Marquee Track */}
+          <div className="mt-20 w-full relative overflow-hidden py-4 border-t border-white/[0.04] pt-10">
+            <div className="marquee-gradient-overlay" />
+            <div className="animate-marquee flex gap-16 items-center opacity-40 hover:opacity-75 transition-opacity duration-500">
+              {/* Set 1 */}
+              <div className="flex items-center gap-16 shrink-0">
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523 2.528 2.528 0 0 1-2.522-2.523 2.528 2.528 0 0 1 2.522-2.52h2.52v2.52zm1.261 0a2.528 2.528 0 0 1 2.52-2.52h5.043a2.528 2.528 0 0 1 2.522 2.52v5.042a2.528 2.528 0 0 1-2.522 2.52H8.824a2.528 2.528 0 0 1-2.52-2.52v-5.042zM8.824 5.043a2.528 2.528 0 0 1-2.52-2.52 2.528 2.528 0 0 1 2.52-2.522 2.528 2.528 0 0 1 2.522 2.522v2.52h-2.522zm0 1.261a2.528 2.528 0 0 1 2.522 2.52v5.043a2.528 2.528 0 0 1-2.522 2.52H3.782a2.528 2.528 0 0 1-2.52-2.52V8.824a2.528 2.528 0 0 1 2.52-2.52h5.042zm10.134 3.761a2.528 2.528 0 0 1 2.522-2.52 2.528 2.528 0 0 1 2.52 2.52v2.52h-2.52v-2.52zm-1.262 0a2.528 2.528 0 0 1-2.52 2.52H10.13a2.528 2.528 0 0 1-2.522-2.52V3.782a2.528 2.528 0 0 1 2.522-2.52h5.043a2.528 2.528 0 0 1 2.52 2.52v5.042zm-3.761 10.134a2.528 2.528 0 0 1-2.522 2.52 2.528 2.528 0 0 1-2.52-2.522 2.528 2.528 0 0 1 2.52-2.52h2.522v2.522zm0-1.262a2.528 2.528 0 0 1 2.522-2.52h5.043a2.528 2.528 0 0 1 2.52-2.52v5.043a2.528 2.528 0 0 1-2.52 2.52h-5.043a2.528 2.528 0 0 1-2.522-2.52v-5.043z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Slack</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">GitHub</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <span className="h-4 w-4 bg-zinc-600 text-black flex items-center justify-center font-bold text-[10px] rounded-sm hover:bg-white select-none shrink-0 font-sans leading-none">N</span>
+                  <span className="font-light tracking-wider">Notion</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 1-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.955 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Discord</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M11.53 2C6.81 2 3 5.81 3 10.53V22h11.47c4.72 0 8.53-3.81 8.53-8.53V2h-11.47zM8.6 15.5c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zm0-4.6c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zm5.8 4.6c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zM20.2 8.6c0 4.7-3.8 8.5-8.5 8.5H3V8.6C3 3.9 6.8 0 11.5 0h8.7v8.6z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Jira</span>
+                </div>
+                <div className="flex items-center gap-2 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <span className="font-semibold tracking-tighter text-md leading-none">L</span>
+                  <span className="font-light tracking-wider">Linear</span>
+                </div>
+                <div className="flex items-center gap-2 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M8.25 12a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm0 7.5a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zM15.75 12a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm0 7.5a3.75 3.75 0 1 1-3.75-3.75 3.75 3.75 0 0 1 3.75 3.75z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Figma</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-zinc-300 text-sm font-semibold">
-                <FileText className="h-4 w-4" /> Notion
-              </div>
-              <div className="flex items-center gap-2 text-zinc-300 text-sm font-semibold">
-                <GitBranch className="h-4 w-4" /> GitHub
-              </div>
-              <div className="flex items-center gap-2 text-zinc-300 text-sm font-semibold">
-                <Database className="h-4 w-4" /> Jira
-              </div>
-              <div className="flex items-center gap-2 text-zinc-300 text-sm font-semibold">
-                <Clock className="h-4 w-4" /> Salesforce
+              
+              {/* Set 2 */}
+              <div className="flex items-center gap-16 shrink-0">
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523 2.528 2.528 0 0 1-2.522-2.523 2.528 2.528 0 0 1 2.522-2.52h2.52v2.52zm1.261 0a2.528 2.528 0 0 1 2.52-2.52h5.043a2.528 2.528 0 0 1 2.522 2.52v5.042a2.528 2.528 0 0 1-2.522 2.52H8.824a2.528 2.528 0 0 1-2.52-2.52v-5.042zM8.824 5.043a2.528 2.528 0 0 1-2.52-2.52 2.528 2.528 0 0 1 2.52-2.522 2.528 2.528 0 0 1 2.522 2.522v2.52h-2.522zm0 1.261a2.528 2.528 0 0 1 2.522 2.52v5.043a2.528 2.528 0 0 1-2.522 2.52H3.782a2.528 2.528 0 0 1-2.52-2.52V8.824a2.528 2.528 0 0 1 2.52-2.52h5.042zm10.134 3.761a2.528 2.528 0 0 1 2.522-2.52 2.528 2.528 0 0 1 2.52 2.52v2.52h-2.52v-2.52zm-1.262 0a2.528 2.528 0 0 1-2.52 2.52H10.13a2.528 2.528 0 0 1-2.522-2.52V3.782a2.528 2.528 0 0 1 2.522-2.52h5.043a2.528 2.528 0 0 1 2.52 2.52v5.042zm-3.761 10.134a2.528 2.528 0 0 1-2.522 2.52 2.528 2.528 0 0 1-2.52-2.522 2.528 2.528 0 0 1 2.52-2.52h2.522v2.522zm0-1.262a2.528 2.528 0 0 1 2.522-2.52h5.043a2.528 2.528 0 0 1 2.52-2.52v5.043a2.528 2.528 0 0 1-2.52 2.52h-5.043a2.528 2.528 0 0 1-2.522-2.52v-5.043z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Slack</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">GitHub</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <span className="h-4 w-4 bg-zinc-600 text-black flex items-center justify-center font-bold text-[10px] rounded-sm hover:bg-white select-none shrink-0 font-sans leading-none">N</span>
+                  <span className="font-light tracking-wider">Notion</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 1-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.955 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Discord</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M11.53 2C6.81 2 3 5.81 3 10.53V22h11.47c4.72 0 8.53-3.81 8.53-8.53V2h-11.47zM8.6 15.5c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zm0-4.6c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zm5.8 4.6c-.8 0-1.4-.6-1.4-1.4s.6-1.4 1.4-1.4 1.4.6 1.4 1.4-.6 1.4-1.4 1.4zM20.2 8.6c0 4.7-3.8 8.5-8.5 8.5H3V8.6C3 3.9 6.8 0 11.5 0h8.7v8.6z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Jira</span>
+                </div>
+                <div className="flex items-center gap-2 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <span className="font-semibold tracking-tighter text-md leading-none">L</span>
+                  <span className="font-light tracking-wider">Linear</span>
+                </div>
+                <div className="flex items-center gap-2 text-zinc-400 hover:text-white font-medium text-sm tracking-wide transition-colors duration-300 select-none">
+                  <svg className="h-4 w-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M8.25 12a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm0 7.5a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zM15.75 12a3.75 3.75 0 1 1 0-7.5 3.75 3.75 0 0 1 0 7.5zm0 7.5a3.75 3.75 0 1 1-3.75-3.75 3.75 3.75 0 0 1 3.75 3.75z"/>
+                  </svg>
+                  <span className="font-light tracking-wider">Figma</span>
+                </div>
               </div>
             </div>
           </div>

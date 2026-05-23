@@ -14,7 +14,6 @@ import {
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
-import { CausalVisualizer } from "@/components/CausalVisualizer";
 import { InteractiveNodeBuilder } from "@/components/InteractiveNodeBuilder";
 
 export default function Home() {
@@ -191,12 +190,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* HIGH-END INTERACTIVE FLOW SIMULATOR */}
-        <section id="how-it-works" className="mt-40 border border-white/[0.06] bg-[#070708]/30 rounded-2xl p-6 sm:p-8 backdrop-blur-md relative overflow-hidden shadow-[0_24px_60px_-15px_rgba(0,0,0,0.8)]">
-          {/* Overlay lighting reflection */}
-          <div className="absolute top-0 right-0 h-[300px] w-[300px] rounded-full bg-[#05F283]/[0.015] blur-[80px] pointer-events-none" />
-          
-          <CausalVisualizer />
+        {/* REACT FLOW WORKSPACE CANVAS */}
+        <section id="how-it-works" className="mt-40">
+          <InteractiveNodeBuilder />
         </section>
 
         {/* DETAILED CORE SERVICES SECTION */}
@@ -239,22 +235,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* INTERACTIVE NODE SYSTEM SECTION */}
-        <section id="workflow" className="mt-40">
-          <div className="text-center max-w-xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#05F283]/20 bg-[#05F283]/[0.02] px-3.5 py-1.5 text-xs text-[#05F283] font-medium tracking-wide mb-4">
-              <Zap className="h-3 w-3 fill-current" />
-              INTELLIGENT NODE ARCHITECTURE
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
-              VedRaq Autonomous App Nodes
-            </h2>
-            <p className="mt-3 text-sm text-zinc-400 font-light">
-              Design general use-case operations. Each app node houses standard credentials, active reasoning models, and custom specifications.
-            </p>
-          </div>
-          <InteractiveNodeBuilder />
-        </section>
+
 
         {/* PRICING PLANS SECTION */}
         <section id="pricing" className="mt-40">

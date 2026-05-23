@@ -57,7 +57,7 @@ export function AppNode({
           {rows.map((row, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-between text-[11px] leading-normal"
+              className="flex items-center justify-between text-[13px] leading-normal"
             >
               <span className="text-zinc-500 font-light tracking-wide">{row.label}</span>
               <div className="text-zinc-300 font-medium text-right shrink-0 flex items-center gap-1.5">
@@ -82,7 +82,7 @@ export function AppNodeChip({ label, icon, className }: AppNodeChipProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-1 bg-white/[0.03] border border-white/[0.06] rounded-[6px] px-2 py-0.5 text-[10px] text-zinc-300 select-none hover:bg-white/[0.06] hover:border-white/12 transition-all shrink-0",
+        "inline-flex items-center gap-1 bg-white/[0.03] border border-white/[0.06] rounded-[6px] px-2 py-0.5 text-xs text-zinc-300 select-none hover:bg-white/[0.06] hover:border-white/12 transition-all shrink-0",
         className
       )}
     >

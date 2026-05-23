@@ -62,7 +62,7 @@ export function Notify({
           </div>
           
           {/* Subtitle Description */}
-          <p className="mt-1.5 text-xs text-zinc-400 font-light leading-relaxed">
+          <p className="mt-1.5 text-[13px] text-zinc-400 font-light leading-relaxed">
             {description}
           </p>
         </div>

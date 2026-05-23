@@ -21,23 +21,23 @@ export function Navbar() {
           </div>
 
           {/* Centered Glassmorphic Menu Inset */}
-          <div className="hidden md:flex items-center bg-[#070708]/80 border border-white/[0.08] rounded-full backdrop-blur-md px-6 py-2.5 gap-6 select-none shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
-            <a href="#how-it-works" className="text-xs text-zinc-400 hover:text-white transition-colors duration-200 font-medium">
+          <div className="hidden md:flex items-center bg-black/60 border border-white/[0.08] rounded-[12px] backdrop-blur-md px-6 py-2.5 gap-6 select-none shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
+            <a href="#how-it-works" className="text-xs text-zinc-300 hover:text-white transition-colors duration-200 font-medium">
               How it works
             </a>
-            <a href="#services" className="text-xs text-zinc-400 hover:text-white transition-colors duration-200 font-medium">
+            <a href="#services" className="text-xs text-zinc-300 hover:text-white transition-colors duration-200 font-medium">
               Services
             </a>
-            <a href="#case-studies" className="text-xs text-zinc-400 hover:text-white transition-colors duration-200 font-medium">
+            <a href="#case-studies" className="text-xs text-zinc-300 hover:text-white transition-colors duration-200 font-medium">
               Case Studies
             </a>
-            <a href="#pricing" className="text-xs text-zinc-400 hover:text-white transition-colors duration-200 font-medium">
+            <a href="#pricing" className="text-xs text-zinc-300 hover:text-white transition-colors duration-200 font-medium">
               Pricing
             </a>
-            <a href="#blogs" className="text-xs text-zinc-400 hover:text-white transition-colors duration-200 font-medium">
+            <a href="#blogs" className="text-xs text-zinc-300 hover:text-white transition-colors duration-200 font-medium">
               Blogs
             </a>
-            <a href="#about" className="text-xs text-zinc-400 hover:text-white transition-colors duration-200 font-medium">
+            <a href="#about" className="text-xs text-zinc-300 hover:text-white transition-colors duration-200 font-medium">
               About
             </a>
           </div>

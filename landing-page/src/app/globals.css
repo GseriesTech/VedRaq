@@ -163,20 +163,16 @@
   height: 100%;
   border-radius: 50%;
   background: 
-    /* Extremely bright neon highlight on the top left edge */
-    radial-gradient(circle at 35% 35%, rgba(132, 255, 185, 0.85) 0%, rgba(5, 242, 131, 0.4) 20%, transparent 60%),
-    /* Deep rich emerald center mass */
-    radial-gradient(circle at 50% 50%, rgba(4, 166, 89, 0.9) 0%, rgba(2, 89, 47, 0.95) 45%, rgba(0, 20, 10, 1) 90%),
-    /* Outer atmospheric glow */
-    radial-gradient(circle at 50% 50%, rgba(5, 242, 131, 0.15) 0%, transparent 75%);
+    /* Volumetric shading - bright highlight down to deep shadow */
+    radial-gradient(circle at 35% 35%, rgba(210, 255, 230, 0.95) 0%, rgba(5, 242, 131, 0.8) 12%, rgba(2, 98, 51, 0.98) 45%, rgba(0, 10, 5, 1) 85%);
   
-  /* Drop shadow and wide neon bloom */
+  /* Volumetric internal shadows and strong rim lighting */
   box-shadow: 
-    -20px -20px 80px rgba(5, 242, 131, 0.1) inset,
-    20px 20px 80px rgba(0, 0, 0, 0.9) inset,
-    0 0 120px 10px rgba(5, 242, 131, 0.25);
+    inset -40px -40px 100px rgba(0, 0, 0, 0.98),
+    inset 25px 25px 50px rgba(255, 255, 255, 0.15),
+    0 0 100px rgba(5, 242, 131, 0.15);
   
-  filter: blur(2px);
+  /* Completely sharp, hard crisp 3D edge, no blur filter! */
   animation: orbDrift 20s ease-in-out infinite alternate;
 }
 

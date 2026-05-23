@@ -17,7 +17,7 @@ export function Button({
   className,
   variant = "solid",
   size = "md",
-  pill = true,
+  pill = false,
   startIcon,
   endIcon,
   href,
@@ -42,7 +42,7 @@ export function Button({
     baseStyles,
     variants[variant],
     sizes[size],
-    pill ? "rounded-full" : "rounded-xl",
+    pill ? "rounded-full" : "rounded-[12px]",
     className
   );
 

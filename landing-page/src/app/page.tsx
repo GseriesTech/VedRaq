@@ -212,7 +212,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-white/[0.03] bg-black/80 py-12 text-center text-xs text-zinc-500 font-light relative z-10">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>© 2026 Helium Technologies Inc. All rights reserved.</p>
+          <p>© 2026 VedRaq Technologies Inc. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-zinc-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-zinc-300 transition-colors">Terms of Service</a>
@@ -220,15 +220,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* Floating Made in Framer Badge */}
-      <div className="fixed bottom-6 right-6 z-50 bg-black/85 border border-white/[0.08] hover:border-white/15 px-3 py-1.5 rounded-[6px] flex items-center gap-1.5 shadow-[0_4px_16px_rgba(0,0,0,0.5)] select-none pointer-events-auto backdrop-blur-md transition-all duration-300 group cursor-pointer">
-        {/* Stylized Framer SVG logo */}
-        <svg className="h-2.5 w-2.5 fill-current text-white transition-transform group-hover:scale-105" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 2h14v6H12l7 7H5v-7h7L5 2z" />
-        </svg>
-        <span className="text-[10px] font-medium text-zinc-400 group-hover:text-white transition-colors">Made in Framer</span>
-      </div>
     </div>
   );
 }

@@ -15,6 +15,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { CausalVisualizer } from "@/components/CausalVisualizer";
+import { InteractiveNodeBuilder } from "@/components/InteractiveNodeBuilder";
 
 export default function Home() {
   return (
@@ -62,10 +63,13 @@ export default function Home() {
             </div>
 
             {/* Giant Title Header */}
-            <h1 className="text-5xl font-medium tracking-tight text-white sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight">
-              Automate, <br />
-              Optimize, Scale <br />
-              With AI
+            <h1 className="text-4xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl leading-[1.1] max-w-4xl">
+              VedRaq—is brain <br className="hidden md:inline" />
+              for your company, <br />
+              <span className="text-[#05F283] font-semibold drop-shadow-[0_0_45px_rgba(5,242,131,0.22)]">
+                let your company live <br className="hidden sm:inline" />
+                and see itself
+              </span>
             </h1>
 
             {/* Description Subtitle */}
@@ -233,6 +237,23 @@ export default function Home() {
               className="animate-float"
             />
           </div>
+        </section>
+
+        {/* INTERACTIVE NODE SYSTEM SECTION */}
+        <section id="workflow" className="mt-40">
+          <div className="text-center max-w-xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#05F283]/20 bg-[#05F283]/[0.02] px-3.5 py-1.5 text-xs text-[#05F283] font-medium tracking-wide mb-4">
+              <Zap className="h-3 w-3 fill-current" />
+              INTELLIGENT NODE ARCHITECTURE
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
+              VedRaq Autonomous App Nodes
+            </h2>
+            <p className="mt-3 text-sm text-zinc-400 font-light">
+              Design general use-case operations. Each app node houses standard credentials, active reasoning models, and custom specifications.
+            </p>
+          </div>
+          <InteractiveNodeBuilder />
         </section>
 
         {/* PRICING PLANS SECTION */}

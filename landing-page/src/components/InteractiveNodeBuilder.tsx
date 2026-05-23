@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { AppNode, AppNodeChip } from "./AppNode";
+import { Notify } from "./Notify";
 import { Calendar, Bot, MessageSquare, Database, ArrowRight, Activity, Zap } from "lucide-react";
 
 interface NodeData {
@@ -138,6 +139,19 @@ export function InteractiveNodeBuilder() {
               )}
             </React.Fragment>
           ))}
+        </div>
+
+        {/* Real-time System Event Notify Output */}
+        <div className="mt-8 pt-6 border-t border-white/[0.04] z-10 w-full">
+          <span className="text-[10px] text-zinc-500 font-semibold tracking-wider uppercase block mb-3.5">
+            System Event Output
+          </span>
+          <Notify 
+            title="Live Triggers (Stripe & Webhooks)" 
+            description="Slack events, payment webhooks & emails flow without loss." 
+            type="success"
+            showArrow={true}
+          />
         </div>
       </div>
 

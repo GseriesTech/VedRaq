@@ -11,18 +11,20 @@ interface LogoProps {
 export function Logo({ className, iconOnly = false }: LogoProps) {
   return (
     <div className={cn("flex items-center gap-3 select-none", className)}>
-      {/* Mini White Logo Box Icon */}
-      <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 border border-white/10 transition-transform duration-300 hover:scale-105">
-        <div className="h-3 w-3 rounded-full bg-white dot-glow" />
-        <div className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-white/40" />
-        <div className="absolute bottom-1 left-1 h-1.5 w-1.5 rounded-full bg-white/40" />
+      {/* Premium Helium Neon Green Rounded Square Logo */}
+      <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-[#05F283] transition-transform duration-300 hover:scale-105 helium-dot-glow">
+        {/* Curved leaf/flow geometric inset matching the premium SaaS template style */}
+        <div className="h-4.5 w-4.5 rounded-[5px] bg-black/90 flex items-center justify-center">
+          <div className="h-2 w-2 rounded-full bg-[#05F283] helium-dot-glow animate-pulse" />
+        </div>
       </div>
 
       {!iconOnly && (
-        <span className="text-xl font-light tracking-wider text-white">
-          Ved<span className="font-semibold">Raq</span>
+        <span className="text-xl font-medium tracking-tight text-white">
+          Helium
         </span>
       )}
     </div>
   );
 }
+

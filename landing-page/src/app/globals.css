@@ -123,230 +123,145 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-[#030303] text-foreground antialiased selection:bg-zinc-800 selection:text-white;
+    @apply bg-black text-foreground antialiased selection:bg-zinc-800 selection:text-white;
   }
   html {
     @apply font-sans scroll-smooth;
   }
 }
 
-/* Custom Obsidian Smoke Background Styles */
-.smoke-bg-container {
+/* Custom Helium Brand & 3D Glowing Orb Styles */
+.helium-bg-grid {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1440px;
-  height: 100%;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 70%, transparent 100%);
   pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
-/* Smoky ribbon shapes mimicking the premium fluid flow in the design reference */
-.smoke-ribbon-1 {
+/* 3D realistic green glowing sphere/orb container */
+.helium-orb-container {
   position: absolute;
   top: -10%;
-  left: -20%;
-  width: 140%;
-  height: 80%;
-  background: radial-gradient(
-    ellipse at 50% 40%,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 255, 255, 0.08) 30%,
-    rgba(255, 255, 255, 0.02) 50%,
-    transparent 70%
-  );
-  filter: blur(100px);
-  transform: rotate(-12deg) scaleY(0.7);
-  animation: smokeBreath1 18s ease-in-out infinite alternate;
+  right: -15%;
+  width: 75vw;
+  max-width: 900px;
+  height: 75vw;
+  max-height: 900px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
 }
 
-.smoke-ribbon-2 {
+/* Multi-layered radial gradients inside the orb to build a rich 3D sense */
+.helium-orb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: 
+    /* Extremely bright neon highlight on the top left edge */
+    radial-gradient(circle at 35% 35%, rgba(132, 255, 185, 0.85) 0%, rgba(5, 242, 131, 0.4) 20%, transparent 60%),
+    /* Deep rich emerald center mass */
+    radial-gradient(circle at 50% 50%, rgba(4, 166, 89, 0.9) 0%, rgba(2, 89, 47, 0.95) 45%, rgba(0, 20, 10, 1) 90%),
+    /* Outer atmospheric glow */
+    radial-gradient(circle at 50% 50%, rgba(5, 242, 131, 0.15) 0%, transparent 75%);
+  
+  /* Drop shadow and wide neon bloom */
+  box-shadow: 
+    -20px -20px 80px rgba(5, 242, 131, 0.1) inset,
+    20px 20px 80px rgba(0, 0, 0, 0.9) inset,
+    0 0 120px 10px rgba(5, 242, 131, 0.25);
+  
+  filter: blur(2px);
+  animation: orbDrift 20s ease-in-out infinite alternate;
+}
+
+/* Atmospheric neon mist floating behind the orb */
+.helium-orb-glow {
   position: absolute;
   top: 15%;
-  right: -10%;
-  width: 100%;
-  height: 60%;
-  background: radial-gradient(
-    ellipse at 40% 50%,
-    rgba(255, 255, 255, 0.18) 0%,
-    rgba(255, 255, 255, 0.06) 40%,
-    transparent 80%
-  );
-  filter: blur(120px);
-  transform: rotate(8deg) scaleY(0.5);
-  animation: smokeBreath2 24s ease-in-out infinite alternate;
-}
-
-.smoke-ribbon-3 {
-  position: absolute;
-  top: -5%;
-  left: 20%;
+  right: 15%;
   width: 80%;
-  height: 50%;
-  background: conic-gradient(
-    from 180deg at 50% 50%,
-    transparent 0deg,
-    rgba(255, 255, 255, 0.06) 90deg,
-    rgba(255, 255, 255, 0.18) 180deg,
-    rgba(255, 255, 255, 0.06) 270deg,
-    transparent 360deg
-  );
-  filter: blur(90px);
-  opacity: 0.95;
-  transform: rotate(45deg);
-  animation: smokeRotate 40s linear infinite;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(5, 242, 131, 0.28) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+  animation: glowPulse 8s ease-in-out infinite alternate;
 }
 
-.smoke-ribbon-4 {
-  position: absolute;
-  top: -20%;
-  left: 10%;
-  width: 90%;
-  height: 70%;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(255, 255, 255, 0.16) 0%,
-    rgba(255, 255, 255, 0.05) 40%,
-    transparent 80%
-  );
-  filter: blur(110px);
-  transform: rotate(25deg);
-  animation: smokeRotate 60s linear infinite reverse;
-}
-
-/* Subtly moving background elements to make the design feel alive and organic */
-@keyframes smokeBreath1 {
+/* Slow, deep breathing animations for the glowing orb */
+@keyframes orbDrift {
   0% {
-    transform: rotate(-12deg) scaleY(0.65) translateY(0);
-    opacity: 0.8;
+    transform: translate(0, 0) scale(1) rotate(0deg);
   }
   100% {
-    transform: rotate(-10deg) scaleY(0.75) translateY(20px);
-    opacity: 1;
+    transform: translate(-15px, 20px) scale(1.03) rotate(8deg);
   }
 }
 
-@keyframes smokeBreath2 {
+@keyframes glowPulse {
   0% {
-    transform: rotate(8deg) scaleY(0.45) translateX(0);
-    opacity: 0.9;
-  }
-  100% {
-    transform: rotate(11deg) scaleY(0.55) translateX(-40px);
+    transform: scale(0.9);
     opacity: 0.7;
   }
-}
-
-@keyframes smokeRotate {
-  0% {
-    transform: rotate(0deg) scale(0.9);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.1);
-  }
   100% {
-    transform: rotate(360deg) scale(0.9);
-  }
-}
-
-/* Subtle dot glow */
-.dot-glow {
-  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.4);
-}
-
-/* Custom scroll-down mouse wheel indicator animation */
-@keyframes scrollWheel {
-  0% {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-50%, 6px);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translate(-50%, 0);
+    transform: scale(1.1);
     opacity: 1;
   }
 }
 
-.animate-mouse-wheel {
-  animation: scrollWheel 2s ease-in-out infinite;
+/* Helium specific logo dot glow */
+.helium-dot-glow {
+  box-shadow: 0 0 10px 1.5px rgba(5, 242, 131, 0.6);
 }
 
-/* Glow lines and pulse trails for the interactive pipelines */
-@keyframes pulseFlow {
-  0% {
-    stroke-dashoffset: 40;
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0.3;
-  }
+/* Testimonial custom styling matching screenshot */
+.helium-testimonial-badge {
+  background: rgba(10, 10, 10, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
 }
 
-.animate-pulse-flow {
-  stroke-dasharray: 8 12;
-  animation: pulseFlow 4s linear infinite;
-}
-
-/* Subtle node hover card animations */
-.glow-card-hover:hover {
-  box-shadow: 0 0 25px -5px rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Glossy Dark Button styling matching the screenshot exactly */
-.glossy-btn-solid {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.015) 50%, rgba(0, 0, 0, 0) 100%), #0D0D0E;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Premium Helium button styling matching screenshot color properties */
+.helium-btn-green {
+  background: #05F283;
+  color: #000000;
   box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.08),
-    0 1px 2px rgba(0, 0, 0, 0.3),
-    0 4px 12px rgba(0, 0, 0, 0.4);
-  color: #F4F4F5;
+    0 4px 14px rgba(5, 242, 131, 0.25),
+    0 1px 2px rgba(5, 242, 131, 0.15);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glossy-btn-solid:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 50%, rgba(0, 0, 0, 0) 100%), #141416;
-  border-color: rgba(255, 255, 255, 0.16);
+.helium-btn-green:hover {
+  background: #04d673;
   box-shadow: 
-    inset 0 1px 1px rgba(255, 255, 255, 0.12),
-    0 1px 2px rgba(0, 0, 0, 0.2),
-    0 8px 24px rgba(0, 0, 0, 0.5);
+    0 6px 22px rgba(5, 242, 131, 0.4),
+    0 1px 3px rgba(5, 242, 131, 0.25);
+  transform: translateY(-1px);
+}
+
+.helium-btn-dark {
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.helium-btn-dark:hover {
+  background: rgba(20, 20, 20, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
   color: #FFFFFF;
   transform: translateY(-1px);
 }
 
-.glossy-btn-outline {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 50%, rgba(0, 0, 0, 0) 100%), #080809;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  box-shadow: 
-    inset 0 1px 0px rgba(255, 255, 255, 0.03),
-    0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #A1A1AA;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glossy-btn-outline:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 50%, rgba(0, 0, 0, 0) 100%), #0B0B0C;
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    inset 0 1px 0px rgba(255, 255, 255, 0.05),
-    0 6px 16px rgba(0, 0, 0, 0.3);
-  color: #F4F4F5;
-  transform: translateY(-1px);
-}
-
-/* Infinite horizontal scroll animation for the floating marquee */
+/* Horizontal scroll animation for the integrations marquee */
 @keyframes marqueeScroll {
   0% {
     transform: translateX(0%);
@@ -359,7 +274,7 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 25s linear infinite;
+  animation: marqueeScroll 30s linear infinite;
 }
 
 .animate-marquee:hover {
@@ -370,6 +285,47 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to right, #030303 0%, rgba(3, 3, 3, 0) 28%, rgba(3, 3, 3, 0) 72%, #030303 100%);
+  background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 100%);
   z-index: 10;
+}
+
+/* Pulsing neon dots for interactive graph nodes */
+@keyframes pulseFlowGreen {
+  0% {
+    stroke-dashoffset: 40;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-flow-green {
+  stroke-dasharray: 8 12;
+  animation: pulseFlowGreen 3.5s linear infinite;
+}
+
+.helium-node-glow {
+  box-shadow: 0 0 15px rgba(5, 242, 131, 0.3);
+}
+
+/* Smooth float animation for premium cards */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

@@ -26,8 +26,8 @@ export function Button({
   const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-300 select-none outline-none focus-visible:ring-2 focus-visible:ring-white/40 active:scale-[0.98]";
   
   const variants = {
-    solid: "glossy-btn-solid",
-    outline: "glossy-btn-outline",
+    solid: "helium-btn-green font-semibold text-black",
+    outline: "helium-btn-dark",
     glass: "bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:border-white/20",
     ghost: "bg-transparent text-zinc-400 hover:text-white hover:bg-white/[0.04]",
   };
